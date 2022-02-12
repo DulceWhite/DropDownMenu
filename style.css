@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url(rob-wingate-Fd9tUmRBJzk-unsplash.jpg);
+   background-size: cover;
+   background-repeat: no-repeat; 
+    font-family: 'Prompt', sans-serif;
+    background-color:#d8e2dc;
+    
+    
+}
+
+.navbar{
+    background-color: #05668d;
+    text-align: center;
+    
+}
+
+.navbar ul{
+    display: inline-flex;
+    list-style: none;
+}
+
+.navbar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: azure;
+}
+
+/* Q: Why is my active showing so little hover effect  */
+/* A: because I put the class active to the wrong element, should be in the li element */
+.active, .navbar ul li:hover{
+    background: #81c3d7;
+    border-radius: 13px;
+
+}
+
+/* padding for he icon added */
+.navbar .bi{
+    margin-right: 8px;
+}
+
+/* to hide the submenu 1 */
+.submenu-1{
+    display: none;
+}
+
+/* to display submenu when hover */
+.navbar ul li:hover .submenu-1{
+    display: block;
+    position: absolute;
+    background: #05668d;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+/* to change the direction of display */
+.navbar ul li:hover .submenu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+/* styling on submenu, Q: border bottom is not showing, why? A: because I had a space between border-bottom: 2 and px */
+.navbar ul li:hover .submenu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px solid azure;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+/* to remove the border on the last submenu item */
+.navbar ul li:hover .submenu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+/* effect when hover over submenu */
+
+.navbar ul li:hover .submenu-1 ul li a:hover{
+    color: #16425b;
+
+}
